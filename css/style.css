@@ -34,7 +34,7 @@ button {
 }
 
 textarea {
-    resize: vertical;
+    resize: none;
 }
 
 /* Common Styles */
