@@ -1,0 +1,557 @@
+/* General Styles */
+
+body {
+    font-family: 'Changa', sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Changa', 'sans-serif';
+    outline: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Common Styles */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    width: 78%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.pd-y {
+    padding: 40px 0px;
+}
+
+/* Header Section */
+
+header {
+    background-color: #d0c493;
+    overflow: hidden;
+}
+
+header .logo {
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+}
+
+header .nav {
+    float: right;
+    margin-top: 15px;
+}
+
+header .nav ul li {
+    display: inline-block;
+    font-size: 15px;
+}
+
+header .nav ul li a {
+    padding: 0px 8px;
+    color: #832b23;
+    font-weight: 800;
+    transition: all 0.3s ease 0s;
+}
+
+header .logo img {
+    height: 72px;
+}
+
+header .nav ul li a:hover {
+    color: #a8534c;
+}
+
+header .social-media {
+    direction: ltr;
+    float: left;
+    margin: 30px 70px;
+}
+
+header .social-media a {
+    display: inline-block;
+    font-size: 22px;
+    background: transparent;
+    color: #333333;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s ease-in 0s;
+}
+
+header .social-media a:hover {
+    background: #87342c;
+    color: #ffffff;
+}
+
+/* Section Home */
+
+.home {
+    position: relative;
+    height: 84vh;
+    background-image: url(../images/img2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.home-content {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-top: 2px dashed #fff;
+    border-bottom: 2px dashed #fff;
+}
+
+.home-content .home-description {
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-content h2 {
+    color: white;
+    text-shadow: 1px 2px 5px #000;
+    font-size: 28px;
+}
+
+.home-content .btn {
+    background: #cf4440;
+    width: 150px;
+    padding: 4px;
+    border-radius: 50px;
+    color: #ffffff;
+    -webkit-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+}
+
+.home-content .btn:hover {
+    background: #972f26;
+    transition: all 0.4s ease 0s;
+}
+
+/* Meals Section */
+
+.meals {
+    text-align: center;
+}
+
+.meals .meals-choices button {
+    position: relative;
+    margin: 0px 50px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.meals .meals-choices button.active {
+    color: #832b23;
+}
+
+.meals .meals-choices button.active:after {
+    /* background-color: #832b23; */
+    transition: all 0.5s ease 0s;
+    border-right: 105px solid #832b23;
+    border-left: 105px solid #832b23;
+    box-sizing: border-box;
+}
+
+.meals .meals-choices button:after {
+    position: absolute;
+    display: block;
+    content: "";
+    right: -50%;
+    width: 210px;
+    height: 3px;
+    margin-top: 20px;
+    background-color: #ebebeb;
+    transition: all 0.3s ease 0s;
+}
+
+.restaurant .restaurant-item, .breakfast .breakfast-item, .lunch .lunch-item {
+    float: left;
+    width: calc(33% - 20px);
+    margin: 0px 10px;
+    background: #ffffff;
+}
+
+.restaurant .restaurant-item img, .breakfast .breakfast-item img, .lunch .lunch-item img {
+    width: 100%;
+    height: 230px;
+}
+
+.restaurant-item img:hover, .breakfast-item img:hover, .lunch-item img:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
+
+.restaurant-item-description, .breakfast-item-description, . .lunch-item-description {
+    padding-bottom: 40px;
+}
+
+span.meal-name, span.meal-price, span.availability {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333333;
+}
+
+span.meal-name, span.availability {
+    float: right;
+    margin-right: 10px;
+}
+
+span.availability:before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-left: 8px;
+    background: #008800;
+    border-radius: 50%;
+}
+
+span.meal-price, .stars-rating {
+    float: left;
+    margin-left: 10px;
+}
+
+.stars-rating {
+    direction: ltr;
+}
+
+.stars-rating span {
+    color: #333333;
+}
+
+.stars-rating .checked {
+    color: orange;
+}
+
+.restaurant, .breakfast, .lunch {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.meals-menu .restaurant .stars-rating span, .meals-menu .breakfast .stars-rating span, .meals-menu .lunch .stars-rating span {
+    cursor: pointer;
+}
+
+/* Services Section */
+
+section.services {
+    position: relative;
+    height: 470px;
+    background-image: url(../images/5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #ffffff;
+}
+
+.services-content {
+    padding-bottom: 10px;
+}
+
+.services-content h2 {
+    color: #ffffff;
+    font-size: 32px;
+    text-shadow: 1px 2px 5px #000;
+    padding: 10px 0px;
+}
+
+.services-content h3 {
+    font-size: 24px;
+    margin: 4px 0px;
+}
+
+.services-content .services-item {
+    float: left;
+    width: calc(33% - 10px);
+    margin: 0px 5px;
+}
+
+.services-item p {
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+/* Restaurant Meals Section */
+
+section.r-meals {
+    text-align: center;
+}
+
+section.r-meals h2 {
+    position: relative;
+    color: #333333;
+    font-weight: 700;
+    font-size: 28px;
+    border-bottom: 4px solid #d3d3d3;
+    margin-bottom: 40px;
+}
+
+section.r-meals h2:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 220px;
+    right: 40%;
+    left: 50%;
+    height: 4px;
+    background: #333333;
+}
+
+section.r-meals .breakfast .breakfast-item {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Map Section */
+
+section.map {
+    height: 400px;
+    border-top: 18px solid #232323;
+    /* background-image: url(../images/map.jpg); */
+    position: relative;
+    margin-top: 80px;
+}
+
+.map span, .contact span {
+    display: block;
+    float: left;
+    background: #232323;
+    color: white;
+    padding: 10px 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: -50px;
+}
+
+.mapouter {
+    position: relative;
+    text-align:  right;
+    height: 400px;
+    width: 100%;
+}
+
+.gmap-canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 400px;
+    width: 100%;
+}
+
+/* Contact Section */
+
+section.contact {
+    height: 600px;
+    background: #d0c493;
+    border-top: 18px solid #821517;
+}
+
+section.contact .container {
+    margin-top: 80px;
+}
+
+.contact .contact-info, .contact .quick-links, .contact .send-message {
+    float: right;
+    width: 33%;
+}
+
+.contact .contact-info h3, .contact, .quick-links h3, .contact .send-message h3 {
+    color: #821517;
+}
+
+.contact span {
+    float: right;
+    background: #821517;
+    margin: 0px;
+    margin-right: 30px;
+    margin-top: -5px;
+}
+
+.contact .contact-item {
+    position: relative;
+    margin: 15px 0px;
+    padding-right: 40px;
+}
+
+.contact .contact-item a i {
+    position: absolute;
+    color: #ffffff;
+    background: #821517;
+    right: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+}
+
+.contact .contact-item a {
+    color: #821517;
+    font-weight: 600;
+}
+
+.contact .contact-item a:hover i {
+    background: #832b23;
+    border-radius: 40%;
+}
+
+.contact-info .subscribe form label {
+    display: block;
+    color: #821517;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.contact-info .subscribe form input, .send-message form input, .send-message form textarea {
+    outline: none;
+    border: none;
+    font-family: "Changa", 'sans-serif';
+    padding: 10px 25px;
+    width: 100%;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.contact-info .subscribe form input::placeholder {
+    font-weight: 500;
+    color: #808080;
+}
+
+.contact-info .subscribe button.btn, .contact .send-message button.btn {
+    float: left;
+    background: #821517;
+    width: 120px;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 2px;
+    box-shadow: 0px -1px 2px -1px rgba(0, 0, 0, 0.75);
+}
+
+.subscribe button.btn {
+    margin-top: -10px;
+}
+
+.contact .quick-links {
+    padding-right: 70px;
+}
+
+.contact .quick-links a {
+    display: block;
+    color: #000000;
+    margin: 10px 0px;
+    font-weight: 600;
+    width: 120px;
+}
+
+.contact .quick-links a i {
+    color: #821517;
+    margin-left: 5px;
+}
+
+.contact .send-message input, .contact .send-message textarea {
+    margin: 5px 0px;
+}
+
+.contact .send-message b, .contact .subscribe b {
+    display: block;
+    font-size: 15px;
+    margin: -4px 0px;
+}
+
+/* Footer Section */
+
+footer {
+    height: 120px;
+    background: #8f7e52;
+}
+
+footer .footer-logo {
+    margin-top: 20px;
+    float: right;
+}
+
+.footer-logo span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+footer .social-media {
+    direction: ltr;
+    float: left;
+    margin-top: 50px;
+}
+
+footer .social-media a {
+    display: inline-block;
+    font-size: 22px;
+    background: transparent;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s ease-in 0s;
+}
+
+footer .social-media a:hover {
+    background: #821517;
+    color: #ffffff;
+}
