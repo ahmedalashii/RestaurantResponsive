@@ -77,7 +77,7 @@ var rootElement = document.documentElement;
 
 function handleScroll() {
   var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-  if ((rootElement.scrollTop / scrollTotal ) > 0) {
+  if ((rootElement.scrollTop / scrollTotal ) > 0.13) {
     scrollToTopBtn.classList.add("showBtn")
   } else {
     scrollToTopBtn.classList.remove("showBtn")
