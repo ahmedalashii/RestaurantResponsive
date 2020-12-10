@@ -158,19 +158,66 @@ header .social-media a:hover {
 }
 
 .home-content .btn {
+    position: relative;
+    color: #ffffff;
+    font-size: 14px;
+    border: 3px solid transparent;
+    padding: 5px;
+    border-radius: 50px;
+    width: 170px;
     background: #cf4440;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    /* background: #cf4440;
     width: 150px;
     padding: 4px;
     border-radius: 50px;
     color: #ffffff;
     -webkit-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75); */
+}
+
+.home-content .btn span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #972f26;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--x) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--x) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.btn:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.btn span:nth-child(1) {
+    --x: 1;
+}
+
+.btn span:nth-child(2) {
+    --x: 2;
+}
+
+.btn span:nth-child(3) {
+    --x: 3;
+}
+
+.btn span:nth-child(4) {
+    --x: 4;
 }
 
 .home-content .btn:hover {
-    background: #972f26;
-    transition: all 0.4s ease 0s;
+    border: 3px solid #972f26;
 }
 
 /* Meals Section */
