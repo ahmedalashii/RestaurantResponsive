@@ -13,6 +13,7 @@ body {
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 ul {
@@ -30,11 +31,11 @@ button {
     border: none;
     cursor: pointer;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 textarea {
-    resize: vertical;
+    resize: none;
 }
 
 /* Common Styles */
@@ -55,7 +56,7 @@ textarea {
 }
 
 .pd-y {
-    padding: 40px 0px;
+    padding: 60px 0px;
 }
 
 /* Header Section */
@@ -81,7 +82,7 @@ header .nav ul li {
     font-size: 15px;
 }
 
-header .nav ul li a {
+header .nav ul li a , header .nav ul li span{
     padding: 0px 8px;
     color: #832b23;
     font-weight: 800;
@@ -92,7 +93,7 @@ header .logo img {
     height: 72px;
 }
 
-header .nav ul li a:hover {
+header .nav ul li a:hover , header .nav ul li span:hover{
     color: #a8534c;
 }
 
@@ -158,19 +159,78 @@ header .social-media a:hover {
 }
 
 .home-content .btn {
+    position: relative;
+    color: #ffffff;
+    font-size: 14px;
+    border: 3px solid transparent;
+    padding: 5px;
+    border-radius: 50px;
+    width: 170px;
     background: #cf4440;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease;
+    -webkit-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    /* background: #cf4440;
     width: 150px;
     padding: 4px;
     border-radius: 50px;
     color: #ffffff;
     -webkit-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px -1px 13px -1px rgba(0, 0, 0, 0.75); */
+}
+input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    width: 40%;
+    border-radius: 20px;
+    background-color: white;
+    opacity: 0.9;
+    border: 0;
+    font-family: inherit;
+    margin-bottom: 15px;
+    outline: none;
+
+  }
+.home-content .btn span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: #972f26;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--x) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--x) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.btn:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.btn span:nth-child(1) {
+    --x: 1;
+}
+
+.btn span:nth-child(2) {
+    --x: 2;
+}
+
+.btn span:nth-child(3) {
+    --x: 3;
+}
+
+.btn span:nth-child(4) {
+    --x: 4;
 }
 
 .home-content .btn:hover {
-    background: #972f26;
-    transition: all 0.4s ease 0s;
+    border: 3px solid #972f26;
 }
 
 /* Meals Section */
@@ -186,7 +246,7 @@ header .social-media a:hover {
     color: #333333;
 }
 
-.meals .meals-choices button.active {
+.meals .meals-choices button.active{
     color: #832b23;
 }
 
@@ -194,7 +254,9 @@ header .social-media a:hover {
     /* background-color: #832b23; */
     transition: all 0.5s ease 0s;
     border-right: 105px solid #832b23;
+    /* 210*0.5 */
     border-left: 105px solid #832b23;
+    /* 210*0.5 */
     box-sizing: border-box;
 }
 
@@ -218,8 +280,8 @@ header .social-media a:hover {
 }
 
 .restaurant .restaurant-item img, .breakfast .breakfast-item img, .lunch .lunch-item img {
-    width: 100%;
-    height: 230px;
+    max-width: 100%;
+    height: auto;
 }
 
 .restaurant-item img:hover, .breakfast-item img:hover, .lunch-item img:hover {
@@ -227,23 +289,23 @@ header .social-media a:hover {
     transition: all 0.3s ease 0s;
 }
 
-.restaurant-item-description, .breakfast-item-description, . .lunch-item-description {
+.restaurant-item-description, .breakfast-item-description, .lunch-item-description {
     padding-bottom: 40px;
 }
 
-span.meal-name, span.meal-price, span.availability {
+span.meal-name, span.meal-price, span.availability{
     display: block;
     font-weight: 600;
     font-size: 15px;
     color: #333333;
 }
 
-span.meal-name, span.availability {
+span.meal-name, span.availability{
     float: right;
     margin-right: 10px;
 }
 
-span.availability:before {
+span.availability:before{
     display: inline-block;
     content: "";
     width: 10px;
@@ -325,11 +387,11 @@ section.services {
 
 /* Restaurant Meals Section */
 
-section.r-meals {
+section.r-meals{
     text-align: center;
 }
 
-section.r-meals h2 {
+section.r-meals h2 , section.meals h2{
     position: relative;
     color: #333333;
     font-weight: 700;
@@ -338,7 +400,7 @@ section.r-meals h2 {
     margin-bottom: 40px;
 }
 
-section.r-meals h2:after {
+section.r-meals h2:after ,section.meals h2:after{
     position: absolute;
     content: "";
     display: block;
@@ -378,7 +440,7 @@ section.map {
 
 .mapouter {
     position: relative;
-    text-align:  right;
+    text-align: right;
     height: 400px;
     width: 100%;
 }
@@ -554,4 +616,65 @@ footer .social-media a {
 footer .social-media a:hover {
     background: #821517;
     color: #ffffff;
+}
+
+/* Scroll To Top */
+
+.scrollToTopBtn {
+    background-color: #821517;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+}
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Meal Categories */
+.get-category .category-title::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 70%;
+    background: #821517;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+button.category{
+    display: block;
+    font-size: 17px;
+    width: 100%;
+    text-align: right;
+    color: #354052;
+    border-bottom: 1px solid #ebebeb;
+    padding: 5px;
+    border-top: 1px solid #ebebeb;
+    transition: color 0.2s;
+}
+button.category:hover{
+    color: #821517;
+}
+.meal-categories aside.categories{
+    width: 22%;
+    float: right;
+    position: relative;
+    padding: 0px 15px;
+}
+.meal-categories main#main{
+    width: 78%;
+    float: left;
+    border-right: 1px dotted #d4d0d0;
 }

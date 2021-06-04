@@ -1,0 +1,3 @@
+1- To see the project with a beautiful view you must have an internet on your computer to download the font
+2- try to visit a page which doesn't exist on the project's path >> it will show 404 page
+3- if you click search button without put any keyword or with putting non-related keyword (كلمات ليس لها علاقة بالداتا بيز) >> it will show notFound Page

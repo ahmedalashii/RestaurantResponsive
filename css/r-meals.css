@@ -1,0 +1,98 @@
+/* Restaurant Meals Section */
+
+section.r-meals {
+    text-align: center;
+}
+
+section.r-meals h2, section.meals h2 {
+    position: relative;
+    color: #333333;
+    font-weight: 700;
+    font-size: 28px;
+    border-bottom: 4px solid #d3d3d3;
+    margin-bottom: 40px;
+}
+
+section.r-meals h2:after, section.meals h2:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 220px;
+    right: 40%;
+    left: 50%;
+    height: 4px;
+    background: #333333;
+}
+
+section.r-meals .breakfast .breakfast-item {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/* Meal Categories */
+
+.get-category .category-title::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 70%;
+    left: 0;
+    right: 0;
+    background: #821517;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+button.category {
+    display: block;
+    font-size: 17px;
+    width: 100%;
+    text-align: right;
+    color: #354052;
+    border-bottom: 1px solid #ebebeb;
+    padding: 5px;
+    border-top: 1px solid #ebebeb;
+    transition: color 0.2s;
+}
+
+button.category:hover {
+    color: #821517;
+}
+button.category span.numMeals{
+    float: left;
+}
+.meal-categories aside.categories {
+    width: 22%;
+    float: right;
+    position: relative;
+    padding: 0px 15px;
+}
+
+.meal-categories main#main {
+    width: 78%;
+    float: left;
+    border-right: 1px dotted #d4d0d0;
+}
+
+@media (max-width: 880px) {
+    .meal-categories aside.categories {
+        width: 100%;
+        position: relative;
+        padding: 10px 0px;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 2px dotted #d4d0d0;
+    }
+    button.category {
+        text-align: center;
+    }
+    button.category span.numMeals{
+        float: none;
+    }
+    .meal-categories main#main {
+        width: 100%;
+        margin: auto;
+        /* float: left; */
+        border-right: none;
+    }
+}
